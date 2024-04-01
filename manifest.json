@@ -4,7 +4,7 @@
             "id": "language_buzz",
             "version": "0.1",
             "mod_version": "3",
-            "description": "A syntax hilighter for buzz programming language in lite-xl.",
+            "description": "A syntax highlighter for buzz programming language in lite-xl.",
             "path": "src/highlight.lua"
         }
     ]
