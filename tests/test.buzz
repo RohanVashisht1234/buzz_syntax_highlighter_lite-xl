@@ -18,3 +18,4 @@ fun main([ str ] _) > void {
     };
     std.print("Hello, I'm {me.name} and I'm {me.age}.");
 }
+
