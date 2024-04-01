@@ -6,22 +6,20 @@
 local syntax = require "core.syntax"
 
 syntax.add {
-    name = "Buzz",                                                               -- tested ok
-    files = { "%.buzz$" },                                                       -- tested ok
-    comment = "|",                                                               -- tested ok
-    patterns = {                                                                 -- tested ok
-        { pattern = { '"', '"', '\\' },       type = "string" },                 -- tested ok
-        { pattern = "|.*",                    type = "comment" },                -- tested ok
-        { pattern = "[!-/*?:{}=]",            type = "operator" },               -- tested ok
-        { pattern = "[%a_][%w_]*%f[(]",       type = "function" },               -- tested ok
-        { pattern = "const%s+()[%a_][%w_]*",  type = { "keyword", "literal" } }, -- tested ok
-        { pattern = "object%s+()[%a_][%w_]*", type = { "keyword", "literal" } }, -- tested ok
-        { pattern = "var%s+()[%a_][%w_]*",    type = { "keyword", "literal" } }, -- tested ok
-        { pattern = "this+.()[%a_][%w_]*",    type = { "keyword2", "normal" } }, -- tested ok
-        { pattern = "io+.()[%a_][%w_]*",      type = { "keyword", "normal" } },  -- tested ok
-        { pattern = "std+.()[%a_][%w_]*",     type = { "keyword", "normal" } },  -- tested ok
-        { pattern = "-?%d+[%d%.eE_]*",        type = "number" },                 -- tested ok
-        { pattern = "-?%.?%d+",               type = "number" },                 -- tested ok
+    name = "Buzz",
+    files = { "%.buzz$" },
+    comment = "|",
+    patterns = {
+        { pattern = { '"', '"', '\\' },       type = "string" },
+        { pattern = "|.*",                    type = "comment" },
+        { pattern = "[!%-/*?:=><]",             type = "operator" },
+        { pattern = "[%a_][%w_]*%f[(]",       type = "function" },
+        { pattern = "const%s+()[%a_][%w_]*",  type = { "keyword", "literal" } },
+        { pattern = "object%s+()[%a_][%w_]*", type = { "keyword", "literal" } },
+        { pattern = "var%s+()[%a_][%w_]*",    type = { "keyword", "literal" } },
+        { pattern = "-?%d+[%d%.eE_]*",        type = "number" },
+        { pattern = "-?%.?%d+",               type = "number" },
+        { pattern = "[%a_][%w_]*",               type = "normal" },
     },
     symbols = {
         ["bool"]      = "keyword",  -- tested ok
@@ -67,13 +65,13 @@ syntax.add {
         ["int"]       = "keyword",  -- tested ok
         ["const"]     = "keyword",  -- tested ok
         ["namespace"] = "keyword",  -- tested ok
-        ["this"]      = "keyword2", -- tested ok
+        ["this"]      = "keyword2",  -- tested ok
         ["null"]      = "literal",  -- tested ok
         ["true"]      = "literal",  -- tested ok
         ["false"]     = "literal",  -- tested ok
         ["in"]        = "literal",  -- tested ok
         ["static"]    = "keyword2", -- tested ok
-        ["std"]       = "keyword2", -- tested ok
-        ["io"]        = "keyword2", -- tested ok
+        ["std"]    = "keyword2", -- tested ok
+        ["io"]    = "keyword2", -- tested ok
     }
 }

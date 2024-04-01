@@ -11,7 +11,7 @@ object Person{
     }
 }
 
-fun main([ str ] _) > void {
+fun main([str] _) > void{
     var me = Person{
         name = "Rohan Vashisht",
         age = 18,
