@@ -12,14 +12,14 @@ syntax.add {
     patterns = {
         { pattern = { '"', '"', '\\' },       type = "string" },
         { pattern = "|.*",                    type = "comment" },
-        { pattern = "[!%-/*?:=><]",             type = "operator" },
+        { pattern = "[!%-/*?:=><]",           type = "operator" },
         { pattern = "[%a_][%w_]*%f[(]",       type = "function" },
         { pattern = "const%s+()[%a_][%w_]*",  type = { "keyword", "literal" } },
         { pattern = "object%s+()[%a_][%w_]*", type = { "keyword", "literal" } },
         { pattern = "var%s+()[%a_][%w_]*",    type = { "keyword", "literal" } },
         { pattern = "-?%d+[%d%.eE_]*",        type = "number" },
         { pattern = "-?%.?%d+",               type = "number" },
-        { pattern = "[%a_][%w_]*",               type = "normal" },
+        { pattern = "[%a_][%w_]*",            type = "normal" },
     },
     symbols = {
         ["bool"]      = "keyword",  -- tested ok
@@ -65,13 +65,13 @@ syntax.add {
         ["int"]       = "keyword",  -- tested ok
         ["const"]     = "keyword",  -- tested ok
         ["namespace"] = "keyword",  -- tested ok
-        ["this"]      = "keyword2",  -- tested ok
+        ["this"]      = "keyword2", -- tested ok
         ["null"]      = "literal",  -- tested ok
         ["true"]      = "literal",  -- tested ok
         ["false"]     = "literal",  -- tested ok
         ["in"]        = "literal",  -- tested ok
         ["static"]    = "keyword2", -- tested ok
-        ["std"]    = "keyword2", -- tested ok
-        ["io"]    = "keyword2", -- tested ok
+        ["std"]       = "keyword2", -- tested ok
+        ["io"]        = "keyword2", -- tested ok
     }
 }
